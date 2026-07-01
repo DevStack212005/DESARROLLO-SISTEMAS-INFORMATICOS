@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System | Help Desk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">HD</div>
+        <div>
+          <h2>Help Desk</h2>
+          <p>Design System</p>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="#" class="active">Componentes</a>
+        <a href="#">Botones</a>
+        <a href="#">Formularios</a>
+        <a href="#">Tarjetas</a>
+        <a href="#">Badges</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Actividad 5</span>
+          <h1>Librería de Componentes UI</h1>
+          <p>Design System reutilizable para el sistema de gestión de incidentes.</p>
+        </div>
+
+        <button class="btn btn-primary">Nuevo ticket</button>
+      </header>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <h2>Botones</h2>
+            <p>Componentes para acciones principales, secundarias y críticas.</p>
+          </div>
+        </div>
+
+        <div class="component-row">
+          <button class="btn btn-primary">Guardar cambios</button>
+          <button class="btn btn-secondary">Cancelar</button>
+          <button class="btn btn-danger">Eliminar ticket</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <h2>Formulario de ticket</h2>
+            <p>Campos reutilizables para registrar incidentes en el sistema.</p>
+          </div>
+        </div>
+
+        <form class="form-grid">
+          <div class="form-group">
+            <label for="titulo">Título del incidente</label>
+            <input id="titulo" class="form-control" type="text" placeholder="Ej. Error al iniciar sesión">
+          </div>
+
+          <div class="form-group">
+            <label for="area">Área responsable</label>
+            <select id="area" class="form-control">
+              <option>Soporte técnico</option>
+              <option>Redes</option>
+              <option>Sistemas</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="prioridad">Prioridad</label>
+            <select id="prioridad" class="form-control">
+              <option>Alta</option>
+              <option>Media</option>
+              <option>Baja</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" class="form-control" rows="4" placeholder="Describa el problema encontrado"></textarea>
+          </div>
+
+          <div class="form-actions full">
+            <button type="submit" class="btn btn-primary">Registrar ticket</button>
+            <button type="reset" class="btn btn-secondary">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <h2>Tarjetas de tickets</h2>
+            <p>Contenedores visuales para mostrar información resumida.</p>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+
+          <article class="ticket-card priority-high">
+            <div class="card-top">
+              <span class="badge badge-high">Alta</span>
+              <span class="ticket-code">#TK-001</span>
+            </div>
+            <h3>Fallo en autenticación</h3>
+            <p>El usuario no puede acceder al sistema con sus credenciales institucionales.</p>
+            <div class="card-footer">
+              <span>Soporte técnico</span>
+              <button class="btn btn-small btn-primary">Ver</button>
+            </div>
+          </article>
+
+          <article class="ticket-card priority-medium">
+            <div class="card-top">
+              <span class="badge badge-medium">Media</span>
+              <span class="ticket-code">#TK-002</span>
+            </div>
+            <h3>Solicitud de permisos</h3>
+            <p>Se requiere habilitar acceso al módulo de reportes administrativos.</p>
+            <div class="card-footer">
+              <span>Sistemas</span>
+              <button class="btn btn-small btn-secondary">Revisar</button>
+            </div>
+          </article>
+
+          <article class="ticket-card priority-low">
+            <div class="card-top">
+              <span class="badge badge-low">Baja</span>
+              <span class="ticket-code">#TK-003</span>
+            </div>
+            <h3>Actualización de perfil</h3>
+            <p>El usuario solicita modificar datos personales dentro de la plataforma.</p>
+            <div class="card-footer">
+              <span>Atención al usuario</span>
+              <button class="btn btn-small btn-secondary">Consultar</button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <h2>Badges de prioridad</h2>
+            <p>Etiquetas visuales para clasificar el nivel de urgencia.</p>
+          </div>
+        </div>
+
+        <div class="component-row">
+          <span class="badge badge-high">Prioridad Alta</span>
+          <span class="badge badge-medium">Prioridad Media</span>
+          <span class="badge badge-low">Prioridad Baja</span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
