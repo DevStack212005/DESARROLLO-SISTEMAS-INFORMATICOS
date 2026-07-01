@@ -1,64 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Desk - Inicio</title>
+    <title>Help Desk | Dashboard</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <img src="assets/img/logo.png" alt="Logo del sistema Help Desk" width="120">
-        <h1>Sistema Help Desk</h1>
-        <p>Gestión de Incidentes Tecnológicos</p>
-    </header>
-    <nav aria-label="Menú principal">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="reportar.html">Reportar Incidente</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>Bienvenida</h2>
-            <article>
+
+<div class="layout">
+
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                HD
+            </div>
+
+            <div>
+                <h2>Help Desk</h2>
+                <p>Gestión de Incidentes</p>
+            </div>
+
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html" class="active">
+            Dashboard
+            </a>
+
+            <a href="reporte.html">
+            Reportar Incidente
+            </a>
+
+            <a href="tickets.html">
+             Tickets
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <span class="eyebrow">
+                    Panel Principal
+                </span>
+
+                <h1>Sistema Help Desk</h1>
+
+                <p>
+                    Plataforma para la gestión y seguimiento de incidentes tecnológicos.
+                </p>
+
+            </div>
+
+            <button class="btn btn-primary">
+                Nuevo Ticket
+            </button>
+
+        </header>
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Bienvenido</h2>
+
+                    <p>
+                        Resumen general del funcionamiento del sistema Help Desk.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <article class="ticket-card">
+
                 <h3>Descripción del sistema</h3>
+
                 <p>
-                    Bienvenido al sistema Help Desk. Esta plataforma permite registrar,
-                    administrar y realizar seguimiento a los incidentes tecnológicos
-                    reportados por los usuarios.
+                    El sistema Help Desk permite registrar, administrar y dar seguimiento a los
+                    incidentes tecnológicos reportados por los usuarios de la institución,
+                    facilitando la atención oportuna y el control del estado de cada solicitud.
                 </p>
+
             </article>
+
         </section>
-        <section>
-            <h2>Resumen General</h2>
-            <article>
-                <h3>Incidentes Abiertos</h3>
-                <p>25</p>
-            </article>
-            <article>
-                <h3>Incidentes en Proceso</h3>
-                <p>12</p>
-            </article>
-            <article>
-                <h3>Incidentes Resueltos</h3>
-                <p>48</p>
-            </article>
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Resumen General</h2>
+
+                    <p>
+                        Estado actual de los incidentes registrados.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cards-grid">
+
+                <article class="ticket-card priority-high">
+
+                    <div class="card-top">
+
+                        <span class="badge badge-high">
+                            Alta
+                        </span>
+
+                        <span class="ticket-code">
+                            25
+                        </span>
+
+                    </div>
+
+                    <h3>Incidentes Abiertos</h3>
+
+                    <p>
+                        Casos pendientes de atención inmediata por parte del departamento de soporte.
+                    </p>
+
+                </article>
+
+                <article class="ticket-card priority-medium">
+
+                    <div class="card-top">
+
+                        <span class="badge badge-medium">
+                            Media
+                        </span>
+
+                        <span class="ticket-code">
+                            12
+                        </span>
+
+                    </div>
+
+                    <h3>En Proceso</h3>
+
+                    <p>
+                        Incidentes actualmente asignados y en proceso de resolución.
+                    </p>
+
+                </article>
+
+                <article class="ticket-card priority-low">
+
+                    <div class="card-top">
+
+                        <span class="badge badge-low">
+                            Baja
+                        </span>
+
+                        <span class="ticket-code">
+                            48
+                        </span>
+
+                    </div>
+
+                    <h3>Resueltos</h3>
+
+                    <p>
+                        Tickets cerrados exitosamente luego de completar las acciones correctivas.
+                    </p>
+
+                </article>
+
+            </div>
+
         </section>
-        <section>
-            <h2>Información General</h2>
-            <article>
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Información General</h2>
+
+                    <p>
+                        Recomendaciones para el uso del sistema.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <article class="ticket-card">
+
                 <h3>Últimas novedades</h3>
+
                 <p>
-                    Revise periódicamente el estado de los tickets registrados para
-                    mantener un adecuado seguimiento de los incidentes.
+                    Se recomienda revisar periódicamente el estado de los tickets registrados,
+                    mantener actualizada la información del incidente y cerrar aquellos casos
+                    que hayan sido solucionados para conservar un historial organizado del
+                    soporte técnico realizado.
                 </p>
+
             </article>
+
         </section>
+
     </main>
-    <footer>
-        <p>&copy; 2026 Sistema Help Desk</p>
-    </footer>
+
+</div>
+
 </body>
 
 </html>
