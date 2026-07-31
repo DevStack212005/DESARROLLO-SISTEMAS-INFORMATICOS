@@ -227,7 +227,7 @@ La API fue probada utilizando **Postman**, verificando el correcto funcionamient
 
 # Autor
 
-Desarrollado por **Walther Jair Matute García** para la asignatura **Desarrollo de Sistemas Informáticos** de la Universidad Técnica de Manabí.
+Desarrollado por **Damian Jesus** para la asignatura **Desarrollo de Sistemas Informáticos** de la Universidad Técnica de Manabí.
 
 ---
 
