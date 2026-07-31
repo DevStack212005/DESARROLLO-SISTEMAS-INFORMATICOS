@@ -7,17 +7,26 @@ const pool = require('./config/db');
 
 const app = express();
 
+const origenesPermitidos = [
+  'http://localhost:5173',
+  process.env.FRONTEND_URL
+];
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors(
-  {
-    origin: 'http://localhost:5173',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type']
-  }
-));
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || origenesPermitidos.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Origen no permitido por CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type']
+}));
 
 app.get('/', (req, res) => {
   res.status(200).json({
