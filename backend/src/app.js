@@ -9,7 +9,7 @@ const app = express();
 
 const origenesPermitidos = [
   'http://localhost:5173',
-  'https://desarrollo-sistemas-informaticos-26w7-hx7yevpx5.vercel.app/'
+  'https://desarrollo-sistemas-informaticos-26w7-hx7yevpx5.vercel.app'
 ];
 
 
