@@ -7,9 +7,17 @@ const pool = require('./config/db');
 
 const app = express();
 
-app.use(cors());
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(cors(
+  {
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type']
+  }
+));
 
 app.get('/', (req, res) => {
   res.status(200).json({

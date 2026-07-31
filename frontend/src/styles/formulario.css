@@ -1,0 +1,143 @@
+.formulario {
+  max-width: 950px;
+}
+
+.formulario__seccion {
+  padding: 30px;
+  border: 1px solid #e0e5ed;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(20, 31, 55, 0.05);
+}
+
+.formulario__titulo {
+  margin-bottom: 25px;
+}
+
+.formulario__titulo h3 {
+  margin: 0 0 5px;
+}
+
+.formulario__titulo p {
+  margin: 0;
+  color: #747d8f;
+}
+
+.formulario__fila {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.campo--mitad {
+  width: calc(50% - 10px);
+}
+
+.campo label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d6dce6;
+  border-radius: 9px;
+  background: white;
+  color: #172033;
+  outline: none;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: #4667d9;
+  box-shadow: 0 0 0 3px rgba(70, 103, 217, 0.12);
+}
+
+.formulario__mensaje {
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  border-radius: 8px;
+  background: #edf2ff;
+  color: #294ca7;
+}
+
+.formulario__acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecf1;
+}
+
+.boton {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.boton--principal {
+  background: #4667d9;
+  color: white;
+}
+
+.boton--secundario {
+  border: 1px solid #d5dae4;
+  background: white;
+  color: #384258;
+}
+
+.formulario__mensaje--exito {
+  border: 1px solid #bde8cd;
+  background: #eaf8ef;
+  color: #237344;
+}
+
+.formulario__mensaje--error {
+  border: 1px solid #ffcaca;
+  background: #fff0f0;
+  color: #a92222;
+}
+
+.boton:disabled,
+.campo input:disabled,
+.campo select:disabled,
+.campo textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+@media (max-width: 700px) {
+  .formulario__fila {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .campo--mitad {
+    width: 100%;
+  }
+
+  .formulario__acciones {
+    flex-direction: column-reverse;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}
