@@ -1,4 +1,5 @@
-const API_URL = `${import.meta.env.VITE_API_URL}/tickets`;
+const BASE_URL = import.meta.env.VITE_API_URL.replace(/\/+$/, '');
+const API_URL = `${BASE_URL}/tickets`;
 
 async function procesarRespuesta(respuesta) {
   let datos;
